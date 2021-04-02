@@ -1,0 +1,40 @@
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-rows: repeat(8, auto);
+        grid-template-columns: 3fr 2fr 2fr;
+        padding: 0 20px;
+    }
+
+    header {
+        width: auto;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    .sidebar {
+        @include area(1, 4, 2, 3);
+        border-top: none;
+
+        & h3 {
+            text-align: center;
+        }
+
+        & ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+
+    main {
+        @include area(1, 4, 3, 4);
+    }
+
+    .help {
+        @include area(1, 4, 4, 5);
+        height: auto;
+    }
+}

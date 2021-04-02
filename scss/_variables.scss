@@ -1,0 +1,21 @@
+$color-variables: (
+    'gray-lightest':    #f9f9f9,
+    'gray-lighten':     #ececec,
+    'gray-light':       #d9d9d9,
+    'gray':             #9f9c9c,
+    'gray-dark':        #918b8b,   
+    'gray-darken':      #838383,
+    'gray-darkest':     #434343,
+
+    'foreground':       #fff,
+    'primary':          #b0e0ea,
+    'accent':           rgba(80, 198, 219, 0.85),
+    'secondary':        #693f7e,   
+    'btn-main':         #51bb7b,
+    'btn-ac':           rgb(161, 242, 126)
+);
+
+
+@function select-color($key) {
+    @return map-get($color-variables, $key);
+}

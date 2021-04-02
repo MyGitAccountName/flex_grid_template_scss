@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800&display=swap');
+
+@import 'variables';
+
+@mixin area($col_start, $col-end, $row-start, $row-end) {
+    grid-column: #{$col-start}/#{$col-end};
+    grid-row: #{$row-start}/#{$row-end};
+}
+
+@mixin bg-color($bgcolor) {
+    background-color: select-color($bgcolor);
+}
+
+@mixin text-color($tcolor) {
+    color: select-color($tcolor);
+}
+
+%ex-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    color: select-color('gray-darkest');
+    font-size: 13.12px;
+}
+
+body { 
+    @include bg-color('gray-light');
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@import 'main';
+
+@import 'tablet';
